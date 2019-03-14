@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Y3z-aW-OlN">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
+    </dependencies>
+    <scenes>
+        <!--Name Interface Controller-->
+        <scene sceneID="Fp2-HB-tFo">
+            <objects>
+                <controller id="Y3z-aW-OlN" customClass="NameInterfaceController" customModule="Test_1_2_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Your name" id="yMJ-j9-Hhf"/>
+                        <button width="1" alignment="left" title="Click to add name" id="c7G-LA-PZX">
+                            <connections>
+                                <action selector="nameBtnClickAction" destination="Y3z-aW-OlN" id="FSY-Vq-Six"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="nameBtn" destination="c7G-LA-PZX" id="FDE-Yo-6Fg"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="139" y="-284"/>
+        </scene>
+        <!--interfaceController-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="interfaceController" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Test_1_2_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" id="fZb-zf-iqb" userLabel="seqGroup">
+                            <items>
+                                <imageView width="30" height="30" alignment="left" id="len-xZ-S5X"/>
+                                <imageView width="30" height="30" alignment="left" id="4Rx-gN-1mi"/>
+                                <imageView width="30" height="30" alignment="left" id="EOG-nU-lUB"/>
+                                <imageView width="30" height="30" alignment="left" id="774-b0-hz6"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="Ef7-oO-hbb">
+                            <items>
+                                <imageView width="40" height="40" alignment="left" id="F9Z-gO-Pxf"/>
+                                <button width="20" height="20" alignment="left" title="1" id="7vJ-Yk-RGC">
+                                    <connections>
+                                        <action selector="btn1" destination="AgC-eL-Hgc" id="uN8-Fg-awW"/>
+                                    </connections>
+                                </button>
+                                <imageView width="40" height="40" alignment="left" id="5au-EV-K7i"/>
+                                <button width="20" height="20" alignment="left" title="2" id="cXK-ve-feU">
+                                    <connections>
+                                        <action selector="btn2" destination="AgC-eL-Hgc" id="g8l-lJ-1R8"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="136" alignment="left" verticalAlignment="bottom" id="RxT-dc-MGm">
+                            <items>
+                                <imageView width="40" height="40" alignment="left" id="wuu-lJ-9eO"/>
+                                <button width="20" height="20" alignment="left" title="3" id="fhe-Pj-NmG">
+                                    <connections>
+                                        <action selector="btn3" destination="AgC-eL-Hgc" id="7WI-jR-uXV"/>
+                                    </connections>
+                                </button>
+                                <imageView width="40" height="40" alignment="left" id="h8o-fl-zuM"/>
+                                <button width="20" height="20" alignment="left" title="4" id="zmF-Qf-hPW">
+                                    <connections>
+                                        <action selector="btn4" destination="AgC-eL-Hgc" id="lOy-Fl-I7W"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <timer alignment="center" verticalAlignment="bottom" id="7xh-GP-P7F"/>
+                    </items>
+                    <connections>
+                        <outlet property="ans1" destination="F9Z-gO-Pxf" id="8gL-Bf-nJJ"/>
+                        <outlet property="ans2" destination="5au-EV-K7i" id="Ufk-Oa-y9F"/>
+                        <outlet property="ans2Group" destination="RxT-dc-MGm" id="feg-mb-iNQ"/>
+                        <outlet property="ans3" destination="wuu-lJ-9eO" id="Muh-RO-GBM"/>
+                        <outlet property="ans4" destination="h8o-fl-zuM" id="ehw-pI-m1V"/>
+                        <outlet property="ansGroup" destination="Ef7-oO-hbb" id="mOt-PJ-w0H"/>
+                        <outlet property="image1" destination="len-xZ-S5X" id="reu-HC-MIV"/>
+                        <outlet property="image2" destination="4Rx-gN-1mi" id="zsz-N8-0Pp"/>
+                        <outlet property="image3" destination="EOG-nU-lUB" id="MWZ-77-09y"/>
+                        <outlet property="image4" destination="774-b0-hz6" id="1GD-0t-sat"/>
+                        <outlet property="imgBtn1" destination="7vJ-Yk-RGC" id="445-rT-9OU"/>
+                        <outlet property="imgBtn2" destination="cXK-ve-feU" id="4I6-em-PWQ"/>
+                        <outlet property="imgBtn3" destination="fhe-Pj-NmG" id="U9k-LO-v9U"/>
+                        <outlet property="imgBtn4" destination="zmF-Qf-hPW" id="6Zx-Dq-6eJ"/>
+                        <outlet property="seqGroup" destination="fZb-zf-iqb" id="99C-1h-Uh9"/>
+                        <outlet property="timerCount" destination="7xh-GP-P7F" id="olF-Ub-fmR"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="119" y="41"/>
+        </scene>
+        <!--menuInterface-->
+        <scene sceneID="Lt6-2l-13B">
+            <objects>
+                <controller identifier="menuInterface" id="5nI-vz-eI9" customClass="MenuInterfaceController" customModule="Test_1_2_WatchKit_Extension">
+                    <items>
+                        <label width="136" height="29" alignment="left" text="Label" id="Yhb-3I-cWu"/>
+                        <label height="20" alignment="left" text="Label" id="X75-pX-UlJ"/>
+                        <label alignment="left" text="Choose Difficulty:" id="G60-vc-duy"/>
+                        <button width="1" alignment="left" title="Easy" id="brq-UH-WZd">
+                            <connections>
+                                <action selector="easyBtn" destination="5nI-vz-eI9" id="LwK-iH-nh4"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Hard" id="Asz-Tl-kDQ">
+                            <connections>
+                                <action selector="hardBtn" destination="5nI-vz-eI9" id="OFc-DY-ffW"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="nameLabel" destination="Yhb-3I-cWu" id="Otr-ih-7oB"/>
+                        <outlet property="resultLabel" destination="X75-pX-UlJ" id="uPD-b9-d1H"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="389" y="-280"/>
+        </scene>
+    </scenes>
+</document>
